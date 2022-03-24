@@ -16,11 +16,16 @@
 // alert("Hello World!");
 
 const costoKm = 0.21;
-const under18 = 20%;
-const bigliettoIntero = 100%;
-const over65 = 40%;
+const under18 = 0.20;
+const bigliettoIntero = 100;
+const over65 = 0.40;
 
-let kmStimati = ;
-let totCostoKm = ;
-let eta = ;
-let totale = ;
+// let kmStimati = ;
+// let totCostoKm = ;
+// let eta = ;
+// let totale = ;
+
+let kmStimati = prompt('Inserisci il numero di km che vuoi percorrere');
+console.log("Kilometri stimati: ", kmStimati);
+let totCostoKm = kmStimati * costoKm;
+console.log("Totale costo kilometrico: ", totCostoKm);
