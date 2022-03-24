@@ -1,7 +1,9 @@
 // flowchart TD
 //  A[INIZIO] --> B[alert>Inserisci il numero di km che vuoi percorrere] 
 //   B -->|salva il valore di B nella variabile kmStimati| C[kmstimati * const 0.21]
+
 //   C -->|salva il valore di C nella variabile totCostoKm| D{alert>Quanti anni hai?}
+
 //   D -->|salva il valore di D nella variabile eta| E[18<eta<65]
 //   D -->|se minore o uguale a 18 applica il 20% di sconto| F[<=18]
 //   D -->|se maggiore o uguale a 65 applica il 40% di sconto| G[>=65]
@@ -29,3 +31,12 @@ let kmStimati = prompt('Inserisci il numero di km che vuoi percorrere');
 console.log("Kilometri stimati: ", kmStimati);
 let totCostoKm = kmStimati * costoKm;
 console.log("Totale costo kilometrico: ", totCostoKm);
+
+let eta = prompt('Quanti anni hai?');
+console.log("Età in anni:",eta);
+
+if(eta<=18||eta<=65){
+  console.log("Biglietto ridotto");
+} else{
+  console.log("Biglietto intero");
+}
