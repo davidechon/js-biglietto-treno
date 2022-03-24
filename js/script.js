@@ -40,6 +40,7 @@ document.getElementById('prezzoKm').innerHTML += ' ' + totCostoKm; //rivedere i 
 
 let eta = prompt('Quanti anni hai?');
 console.log("Età in anni:",eta);
+document.getElementById('anni').innerHTML += ' ' + eta;
 
 // if(eta<=18&&eta<=65){
 //   console.log("Biglietto ridotto");
@@ -48,9 +49,17 @@ console.log("Età in anni:",eta);
 // }
 
 if(eta<=18){
-  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totCostoKm*under18);
+  let totale = totCostoKm - (totCostoKm * under18);
+  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale);
+  document.getElementById('prezzoBiglietto').innerHTML + ' ' + totale;
 } else if(eta>=65){
-  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totCostoKm*over65);
+  let totale = totCostoKm - (totCostoKm * over65);
+  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale);
 } else{
-  console.log("Biglietto intero. Il prezzo del biglietto è:", totCostoKm);
+  let totale = totCostoKm
+  console.log("Biglietto intero. Il prezzo del biglietto è:", totale);
 }
+
+// let eta = prompt('Quanti anni hai?');
+// console.log("Età in anni:",eta);
+// document.getElementById('anni').innerHTML += ' ' + eta;
