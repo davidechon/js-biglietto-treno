@@ -32,8 +32,11 @@ const over65 = 0.40;
 
 let kmStimati = prompt('Inserisci il numero di km che vuoi percorrere');
 console.log("Kilometri stimati: ", kmStimati);
+document.getElementById('km').innerHTML += ' ' + kmStimati;
+
 let totCostoKm = kmStimati * costoKm;
 console.log("Totale costo kilometrico: ", totCostoKm);
+document.getElementById('prezzoKm').innerHTML += ' ' + totCostoKm; //rivedere i decimali
 
 let eta = prompt('Quanti anni hai?');
 console.log("Età in anni:",eta);
