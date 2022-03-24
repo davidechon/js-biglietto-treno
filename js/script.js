@@ -35,8 +35,8 @@ console.log("Kilometri stimati: ", kmStimati);
 document.getElementById('km').innerHTML += ' ' + kmStimati;
 
 let totCostoKm = kmStimati * costoKm;
-console.log("Totale costo kilometrico: ", totCostoKm);
-document.getElementById('prezzoKm').innerHTML += ' ' + totCostoKm; //rivedere i decimali
+console.log("Totale costo kilometrico: ", totCostoKm.toFixed(2));
+document.getElementById('prezzoKm').innerHTML += ' ' + totCostoKm.toFixed(2);
 
 let eta = prompt('Quanti anni hai?');
 console.log("Età in anni:",eta);
@@ -44,14 +44,14 @@ document.getElementById('anni').innerHTML += ' ' + eta;
 
 if(eta<=18){
   let totale = totCostoKm - (totCostoKm * under18);
-  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale);
-  document.getElementById('prezzoBiglietto').innerHTML + ' ' + totale;
+  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale.toFixed(2));
+  document.getElementById('prezzoBiglietto').innerHTML += ' ' + totale.toFixed(2);
 } else if(eta>=65){
   let totale = totCostoKm - (totCostoKm * over65);
-  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale);
-  document.getElementById('prezzoBiglietto').innerHTML + ' ' + totale;
+  console.log("Biglietto ridotto. Il prezzo del biglietto è:", totale.toFixed(2));
+  document.getElementById('prezzoBiglietto').innerHTML += ' ' + totale.toFixed(2);
 } else{
   let totale = totCostoKm
-  console.log("Biglietto intero. Il prezzo del biglietto è:", totale);
-  document.getElementById('prezzoBiglietto').innerHTML + ' ' + totale;
+  console.log("Biglietto intero. Il prezzo del biglietto è:", totale.toFixed(2));
+  document.getElementById('prezzoBiglietto').innerHTML += ' ' + totale.toFixed(2);
 }
